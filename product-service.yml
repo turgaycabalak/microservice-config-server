@@ -1,1 +1,20 @@
-test.name=test
+server:
+  port: 9090
+
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      auto-index-creation: 'true'
+      authentication-database: admin
+      username: root
+      database: product-service
+      password: root
+      port: '27017'
+      host: localhost
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
